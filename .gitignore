@@ -1,0 +1,12 @@
+# Compiled Python files
+01-code-scripts/*.pyc
+01-code-scripts/__pycache__/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Writings files (for now)
+05-papers-writings/
+
+# Rope files
+.ropeproject/

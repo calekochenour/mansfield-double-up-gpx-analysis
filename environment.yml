@@ -1,0 +1,12 @@
+name: mansfield-gpx-analysis
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.6.7
+  - matplotlib
+  - pandas
+  - geopandas
+  - gpxpy
