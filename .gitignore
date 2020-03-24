@@ -5,8 +5,5 @@
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
-# Writings files (for now)
-05-papers-writings/
-
 # Rope files
 .ropeproject/
