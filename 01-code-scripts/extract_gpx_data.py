@@ -22,7 +22,7 @@ double_up_gpx_df = pd.DataFrame({
     for attribute in attribute_list
 })
 
-# Write extracted gpx data to CSV
+# Write extracted GPX data to CSV
 df_out_path = os.path.join(
     "03-processed-data", "mansfield-double-up-course-data.csv")
 

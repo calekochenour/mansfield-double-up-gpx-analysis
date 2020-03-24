@@ -10,3 +10,5 @@ dependencies:
   - pandas
   - geopandas
   - gpxpy
+  - pandoc
+  - make
