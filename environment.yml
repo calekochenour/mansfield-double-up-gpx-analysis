@@ -12,3 +12,11 @@ dependencies:
   - gpxpy
   - pandoc
   - make
+
+# Jupyter Environment
+#  - autopep8
+#  - jupyterlab
+#  - notebook
+# Need these?
+#  - jupyter_contrib_nbextensions
+#  - nbclean
