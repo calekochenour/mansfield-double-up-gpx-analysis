@@ -22,7 +22,7 @@ Binder will open a Jupyter Notebook in the current web browser. Click "New" and 
 
 From the terminal, you can create and activate the project Conda environment.
 
-Create Conda environment:
+Create environment:
 
 ```bash
 conda env create -f environment.yml
