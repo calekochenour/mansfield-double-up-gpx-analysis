@@ -1,6 +1,2 @@
 # Compiled Python files
-01-code-scripts/*.pyc
 01-code-scripts/__pycache__/
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
