@@ -43,7 +43,7 @@ The analysis uses the following packages and classes:
 
 ### GPX Data Processing
 
-This section creates a copy of the dataframe from the previous section in order to make changes to the representation of the data. No data points were changed or omitted. The following list identifies the changes made to the representation of the data so that it could be interpreted further and plotted:
+No data points were changed or omitted. The following list identifies the changes made to the representation of the data so that it could be interpreted further and plotted:
 
 * Added elevation in feet (default elevation in meters);
 * Converted *datetime* objects to a plottable format;
@@ -60,11 +60,9 @@ The workflow also creates a geodataframe with *geopandas* in order to plot the c
 
 ### GPX Data Visualization
 
-This section creates visualizations for the GPX data over time and throughout the course.
-
 #### Data Attribute Plots
 
-This section plots the raw data (cadence, distance, normalized energy, speed, vertical speed, elevation) over time, to see how each varies as the runner completes the course. The first plot contains subplots for all six attributes and how they vary throughout the course. The following four plots show cadence, normalized energy, distance, and speed, and are visually encoded with the runner's vertical speed (ascending or descending).
+The workflow plots the raw data (cadence, distance, normalized energy, speed, vertical speed, elevation) over time, to see how each varies as the runner completes the course. The first plot contains subplots for all six attributes and how they vary throughout the course. The following four plots show cadence, normalized energy, distance, and speed, and are visually encoded with the runner's vertical speed (ascending or descending).
 
 ![Raw Attribute Data](04-graphics-outputs/01-double-up-gpx-data-figure.png)
 
@@ -78,7 +76,7 @@ This section plots the raw data (cadence, distance, normalized energy, speed, ve
 
 #### Course Plots
 
-This section first plots the course route (with latitude/longitude) and adds arrows that indicate the course direction. In a second subplot, the workflow plots the course route again, with a visual encoding of the runner's vertical speed, indicating whether the runner is ascending or descending the mountain.
+The workflow first plots the course route (with latitude/longitude) and adds arrows that indicate the course direction. In a second subplot, the workflow plots the course route again, with a visual encoding of the runner's vertical speed, indicating whether the runner is ascending or descending the mountain.
 
 The workflow then plots cadence, speed, and normalized energy throughout the course route, and visually encodes the route relative to the respective attribute median values (> median, < median) and maximum values (> 75% max, 50-75% max, 25-50% max, < 25% max). These plots show how the attributes vary throughout the course itself, as opposed to over time.  
 
