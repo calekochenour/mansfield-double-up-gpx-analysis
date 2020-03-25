@@ -1,6 +1,6 @@
 # Mansfield Double Up GPX Analysis
 
-This directory contains the code and files that produce a data science analysis of a GPX file from the Mansfield Double Up mountain/trail race in Stowe, Vermont. The project extracts data from the GPX file, processes and organizes the data, visualizes the data, and summarizes workflow in a Jupyter Notebook report.
+This directory contains the code and files that produce a data science analysis of a GPX file from the [Mansfield Double Up](http://www.nativeendurance.com/mansfielddoubleup.html) mountain/trail race in Stowe, Vermont. The project extracts data from the GPX file, processes and organizes the data, visualizes the data, and summarizes the workflow in a Jupyter Notebook report.
 
 ## Prerequisites
 
