@@ -8,7 +8,7 @@ This analysis attempts to answer the following questions: What is the nature of 
 
 The [Mansfield Double Up](http://www.nativeendurance.com/mansfielddoubleup.html) is a trail/mountain race in Stowe, Vermont, hosted by [Native Endurance](http://www.nativeendurance.com/). This race covers ~11 miles and ~5,000 feet of elevation gain/loss. The "Double Up" is a very appropriate name; the race starts and finishes at the same point and ascends Mount Mansfield (Vermont's highest mountain) from both the East and West sides throughout the race. In addition, runners are almost always running up or down, and very little of the course covers flat terrain.
 
-The GPX file analyzed in the project was provided by [Native Endurance](http://www.nativeendurance.com/), and it contains data from a runner who completed the race in 2017. Understanding what physical metrics are captured in this data and how they vary throughout the race provides a quantitative look at the race, beyond just the latitude, longitude, and overall time the runner took to complete the race.
+The GPX file analyzed in the project was provided by [Native Endurance](http://www.nativeendurance.com/), and it contains data from the 2017 race. Understanding what physical metrics are captured in this data and how they vary throughout the race provides a quantitative look at the race, beyond just the latitude, longitude, and overall time the runner took to complete the race.
 
 ## Assumptions
 
