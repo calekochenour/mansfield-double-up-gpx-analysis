@@ -64,15 +64,15 @@ The workflow also creates a geodataframe with *geopandas* in order to plot the c
 
 The workflow plots the raw data (cadence, distance, normalized energy, speed, vertical speed, elevation) over time, to see how each varies as the runner completes the course. The first plot contains subplots for all six attributes and how they vary throughout the course. The following four plots show cadence, normalized energy, distance, and speed, and are visually encoded with the runner's vertical speed (ascending or descending).
 
-![Raw Attribute Data](04-graphics-outputs/01-double-up-gpx-data-figure.png)
+![Raw Attribute Data](04-graphics-outputs/double-up-gpx-data-figure-01.png)
 
-![Cadence Over Time](04-graphics-outputs/02-double-up-gpx-data-figure.png)
+![Cadence Over Time](04-graphics-outputs/double-up-gpx-data-figure-02.png)
 
-![Distance Over Time](04-graphics-outputs/03-double-up-gpx-data-figure.png)
+![Distance Over Time](04-graphics-outputs/double-up-gpx-data-figure-03.png)
 
-![Normalized Energy Over Time](04-graphics-outputs/04-double-up-gpx-data-figure.png)
+![Normalized Energy Over Time](04-graphics-outputs/double-up-gpx-data-figure-04.png)
 
-![Speed Over Time](04-graphics-outputs/05-double-up-gpx-data-figure.png)
+![Speed Over Time](04-graphics-outputs/double-up-gpx-data-figure-05.png)
 
 #### Course Plots
 
@@ -80,13 +80,13 @@ The workflow first plots the course route (with latitude/longitude) and adds arr
 
 The workflow then plots cadence, speed, and normalized energy throughout the course route, and visually encodes the route relative to the respective attribute median values (> median, < median) and maximum values (> 75% max, 50-75% max, 25-50% max, < 25% max). These plots show how the attributes vary throughout the course itself, as opposed to over time.  
 
-![Course Overview](04-graphics-outputs/06-double-up-gpx-data-figure.png)
+![Course Overview](04-graphics-outputs/double-up-gpx-data-figure-06.png)
 
-![Cadence Throughout the Course](04-graphics-outputs/07-double-up-gpx-data-figure.png)
+![Cadence Throughout the Course](04-graphics-outputs/double-up-gpx-data-figure-07.png)
 
-![Speed Throughout the Course](04-graphics-outputs/08-double-up-gpx-data-figure.png)
+![Speed Throughout the Course](04-graphics-outputs/double-up-gpx-data-figure-08.png)
 
-![Normalized Energy Throughout the Course](04-graphics-outputs/09-double-up-gpx-data-figure.png)
+![Normalized Energy Throughout the Course](04-graphics-outputs/double-up-gpx-data-figure-09.png)
 
 ## Risk Assessment
 

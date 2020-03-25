@@ -101,12 +101,12 @@ with plt.style.context('dark_background'):
 """ Save plots as figures """
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "01-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-01.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
     print(
-        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '01-double-up-gpx-data-figure.png')}")
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', 'double-up-gpx-data-figure-01.png')}")
 
 
 # Plot cadence, distinguishing up/down movement
@@ -143,12 +143,12 @@ with plt.style.context('dark_background'):
 
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "02-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-02.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
     print(
-        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '02-double-up-gpx-data-figure.png')}")
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', 'double-up-gpx-data-figure-02.png')}")
 
 # Plot accumulated distance, distinguishing up/down movement
 with plt.style.context('dark_background'):
@@ -184,12 +184,12 @@ with plt.style.context('dark_background'):
 
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "03-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-03.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
     print(
-        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '03-double-up-gpx-data-figure.png')}")
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', 'double-up-gpx-data-figure-03.png')}")
 
 
 # Plot normalized energry, distinguishing up/down movement
@@ -226,12 +226,12 @@ with plt.style.context('dark_background'):
 
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "04-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-04.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
     print(
-        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '04-double-up-gpx-data-figure.png')}")
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', 'double-up-gpx-data-figure-04.png')}")
 
 # Plot horizontal speed, distinguishing up/down movement
 with plt.style.context('dark_background'):
@@ -267,12 +267,12 @@ with plt.style.context('dark_background'):
 
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "05-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-05.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
     print(
-        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '05-double-up-gpx-data-figure.png')}")
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', 'double-up-gpx-data-figure-05.png')}")
 
 # Plot course lat/lon and distinguish up/down
 with plt.style.context('dark_background'):
@@ -421,12 +421,12 @@ with plt.style.context('dark_background'):
 
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "06-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-06.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
     print(
-        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '06-double-up-gpx-data-figure.png')}")
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', 'double-up-gpx-data-figure-06.png')}")
 
 # Plot course lat/lon with cadence
 with plt.style.context('dark_background'):
@@ -478,12 +478,12 @@ with plt.style.context('dark_background'):
 
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "07-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-07.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
     print(
-        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '07-double-up-gpx-data-figure.png')}")
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', 'double-up-gpx-data-figure-07.png')}")
 
 
 # Plot course lat/lon with speed
@@ -536,12 +536,12 @@ with plt.style.context('dark_background'):
 
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "08-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-08.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
     print(
-        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '08-double-up-gpx-data-figure.png')}")
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', 'double-up-gpx-data-figure-08.png')}")
 
 # Plot course lat/lon with normalized energy
 with plt.style.context('dark_background'):
@@ -593,9 +593,9 @@ with plt.style.context('dark_background'):
 
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "09-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-09.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
     print(
-        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '09-double-up-gpx-data-figure.png')}")
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', 'double-up-gpx-data-figure-09.png')}")

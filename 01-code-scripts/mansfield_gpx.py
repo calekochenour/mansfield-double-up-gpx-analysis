@@ -56,7 +56,7 @@ def extract_gpx_data(gpx_file_path, attribute='elevation'):
             for point in segment.points
         ]
 
-        print(f"SUCCESS: Added {attribute} data to dictionary.")
+        print(f"Extracted {attribute} data.")
 
     # Check if specified attribute is in
     #  GPX extensions (cadence/distance/altitude
@@ -76,7 +76,7 @@ def extract_gpx_data(gpx_file_path, attribute='elevation'):
             if pattern.match(extension.tag)
         ]
 
-        print(f"SUCCESS: Added {attribute} data to dictionary.")
+        print(f"Extracted {attribute} data.")
 
     else:
         data = []
