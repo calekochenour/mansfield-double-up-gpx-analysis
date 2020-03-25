@@ -89,8 +89,11 @@ This section plots the raw data (cadence, distance, energy, speed, vertical spee
 **PLOTS HERE**
 
 Raw attribute data:
-![Raw Attribute Data](04-graphics-outputs/double-up-raw-attributes.png)
+![Raw Attribute Data](04-graphics-outputs/01-double-up-raw-attributes.png)
 
+![Raw Attribute Data](04-graphics-outputs/02-double-up-raw-attributes.png)
+
+![Raw Attribute Data](04-graphics-outputs/10-double-up-raw-attributes.png)
 
 #### 5.6.2 Course Plots
 

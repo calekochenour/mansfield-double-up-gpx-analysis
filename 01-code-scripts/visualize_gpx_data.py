@@ -1,4 +1,4 @@
-""" """
+""" Plot data and save data as figures """
 
 # Imports
 import os
@@ -101,8 +101,28 @@ with plt.style.context('dark_background'):
 """ Save plots as figures """
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "double-up-raw-attributes.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "01-double-up-raw-attributes.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
-    print(f"Saved plot as PNG: 04-graphics-outputs", "double-up-raw-attributes.png")
+    print(
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '01-double-up-raw-attributes.png')}")
+
+
+try:
+    plt.savefig(
+        fname=os.path.join("04-graphics-outputs", "02-double-up-raw-attributes.png"), facecolor='k', dpi=300, bbox_inches="tight")
+except Exception as error:
+    print(f"Could not save plot as PNG. ERROR: {error}")
+else:
+    print(
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '02-double-up-raw-attributes.png')}")
+
+try:
+    plt.savefig(
+        fname=os.path.join("04-graphics-outputs", "10-double-up-raw-attributes.png"), facecolor='k', dpi=300, bbox_inches="tight")
+except Exception as error:
+    print(f"Could not save plot as PNG. ERROR: {error}")
+else:
+    print(
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '10-double-up-raw-attributes.png')}")
