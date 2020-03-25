@@ -4,6 +4,3 @@
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
-
-# Rope files
-.ropeproject/
