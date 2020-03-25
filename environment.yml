@@ -5,18 +5,15 @@ channels:
   - defaults
 
 dependencies:
-  - python=3.6.7
+  - python=3.8.2
   - matplotlib
   - pandas
   - geopandas
   - gpxpy
   - pandoc
   - make
-
-# Jupyter Environment
-#  - autopep8
-#  - jupyterlab
-#  - notebook
-# Need these?
-#  - jupyter_contrib_nbextensions
-#  - nbclean
+  - autopep8
+  - jupyterlab
+  - notebook
+  - jupyter_contrib_nbextensions
+  - nbclean
