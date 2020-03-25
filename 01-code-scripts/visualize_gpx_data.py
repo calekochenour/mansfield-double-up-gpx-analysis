@@ -101,28 +101,501 @@ with plt.style.context('dark_background'):
 """ Save plots as figures """
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "01-double-up-raw-attributes.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "01-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
     print(
-        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '01-double-up-raw-attributes.png')}")
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '01-double-up-gpx-data-figure.png')}")
 
+
+# Plot cadence, distinguishing up/down movement
+with plt.style.context('dark_background'):
+
+    fig, ax = plt.subplots(figsize=(20, 10))
+
+    ax.scatter(
+        vertical_up_df.time, vertical_up_df.cadence, color='green',
+        label='Running Up', zorder=3, s=16)
+
+    ax.scatter(
+        vertical_down_df.time, vertical_down_df.cadence, color='purple',
+        label='Running Down', zorder=2, s=16)
+
+    plt.xlim(double_up_df_enhance.time.min(), double_up_df_enhance.time.max())
+
+    ax.set_xlabel("Time (US Eastern)")
+    ax.set_ylabel("Cadence (steps/minute)")
+    ax.set_title("Mansfield Double Up Course, 2017\nCadence Throughout the Course", size=20)
+    ax.xaxis.label.set_size(20)
+    ax.yaxis.label.set_size(20)
+    ax.title.set_size(24)
+    ax.tick_params(labelsize=16)
+
+    ax.legend(borderpad=0.75,
+              edgecolor='white',
+              fontsize=16,
+              shadow=True)
+
+    # Define the date format
+    date_form = DateFormatter("%H:%M AM")
+    ax.xaxis.set_major_formatter(date_form)
 
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "02-double-up-raw-attributes.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "02-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
     print(
-        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '02-double-up-raw-attributes.png')}")
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '02-double-up-gpx-data-figure.png')}")
+
+# Plot accumulated distance, distinguishing up/down movement
+with plt.style.context('dark_background'):
+
+    fig, ax = plt.subplots(figsize=(20, 10))
+
+    ax.scatter(
+        vertical_up_df.time, vertical_up_df.distance_mile, color='green',
+        label='Running Up', zorder=3, s=16)
+
+    ax.scatter(
+        vertical_down_df.time, vertical_down_df.distance_mile, color='purple',
+        label='Running Down', zorder=2, s=16)
+
+    plt.xlim(double_up_df_enhance.time.min(), double_up_df_enhance.time.max())
+
+    ax.set_xlabel("Time (US Eastern)")
+    ax.set_ylabel("Total Distance (miles)")
+    ax.set_title("Mansfield Double Up Course, 2017\nDistance Throughout the Course", size=20)
+    ax.xaxis.label.set_size(20)
+    ax.yaxis.label.set_size(20)
+    ax.title.set_size(24)
+    ax.tick_params(labelsize=16)
+
+    ax.legend(borderpad=0.75,
+              edgecolor='white',
+              fontsize=16,
+              shadow=True)
+
+    # Define the date format
+    date_form = DateFormatter("%H:%M AM")
+    ax.xaxis.set_major_formatter(date_form)
 
 try:
     plt.savefig(
-        fname=os.path.join("04-graphics-outputs", "10-double-up-raw-attributes.png"), facecolor='k', dpi=300, bbox_inches="tight")
+        fname=os.path.join("04-graphics-outputs", "03-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
 except Exception as error:
     print(f"Could not save plot as PNG. ERROR: {error}")
 else:
     print(
-        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '10-double-up-raw-attributes.png')}")
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '03-double-up-gpx-data-figure.png')}")
+
+
+# Plot normalized energry, distinguishing up/down movement
+with plt.style.context('dark_background'):
+
+    fig, ax = plt.subplots(figsize=(20, 10))
+
+    ax.scatter(
+        vertical_up_df.time, vertical_up_df.energy_norm, color='green',
+        label='Running Up', zorder=3, s=16)  # , linewidth=2)
+
+    ax.scatter(
+        vertical_down_df.time, vertical_down_df.energy_norm, color='purple',
+        label='Running Down', zorder=2, s=16)
+
+    plt.xlim(double_up_df_enhance.time.min(), double_up_df_enhance.time.max())
+
+    ax.set_xlabel("Time (US Eastern)")
+    ax.set_ylabel("Normalized energy (% of max)")
+    ax.set_title("Mansfield Double Up Course, 2017\nEnergy Throughout the Course", size=20)
+    ax.xaxis.label.set_size(20)
+    ax.yaxis.label.set_size(20)
+    ax.title.set_size(24)
+    ax.tick_params(labelsize=16)
+
+    ax.legend(borderpad=0.75,
+              edgecolor='white',
+              fontsize=16,
+              shadow=True)
+
+    # Define the date format
+    date_form = DateFormatter("%H:%M AM")
+    ax.xaxis.set_major_formatter(date_form)
+
+try:
+    plt.savefig(
+        fname=os.path.join("04-graphics-outputs", "04-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+except Exception as error:
+    print(f"Could not save plot as PNG. ERROR: {error}")
+else:
+    print(
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '04-double-up-gpx-data-figure.png')}")
+
+# Plot horizontal speed, distinguishing up/down movement
+with plt.style.context('dark_background'):
+
+    fig, ax = plt.subplots(figsize=(20, 10))
+
+    ax.scatter(
+        vertical_up_df.time, vertical_up_df.speed_mph, color='green',
+        label='Running Up', zorder=3, s=16)  # , linewidth=2)
+
+    ax.scatter(
+        vertical_down_df.time, vertical_down_df.speed_mph, color='purple',
+        label='Running Down', zorder=2, s=16)
+
+    plt.xlim(double_up_df_enhance.time.min(), double_up_df_enhance.time.max())
+
+    ax.set_xlabel("Time (US Eastern)")
+    ax.set_ylabel("Horizontal speed (mph)")
+    ax.set_title("Mansfield Double Up Course, 2017\nSpeed Throughout the Course", size=20)
+    ax.xaxis.label.set_size(20)
+    ax.yaxis.label.set_size(20)
+    ax.title.set_size(24)
+    ax.tick_params(labelsize=16)
+
+    ax.legend(borderpad=0.75,
+              edgecolor='white',
+              fontsize=16,
+              shadow=True)
+
+    # Define the date format
+    date_form = DateFormatter("%H:%M AM")
+    ax.xaxis.set_major_formatter(date_form)
+
+try:
+    plt.savefig(
+        fname=os.path.join("04-graphics-outputs", "05-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+except Exception as error:
+    print(f"Could not save plot as PNG. ERROR: {error}")
+else:
+    print(
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '05-double-up-gpx-data-figure.png')}")
+
+# Plot course lat/lon and distinguish up/down
+with plt.style.context('dark_background'):
+
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(20, 20))
+
+    # Subplot 1
+    double_up_gdf.plot(
+        ax=ax1, markersize=2, color='r', zorder=2, label='Course')
+
+    ax1.set_xlabel("Longitude")
+    ax1.set_ylabel("Latitude")
+    ax1.set_title("Mansfield Double Up Course, 2017", size=20)
+    ax1.grid(True, zorder=1)
+    ax1.xaxis.label.set_size(20)
+    ax1.yaxis.label.set_size(20)
+    ax1.title.set_size(24)
+    ax1.tick_params(labelsize=16)
+
+    ax1.legend(borderpad=0.75,
+               edgecolor='white',
+               fontsize=16,
+               shadow=True)
+
+    # Add course direction arrows
+    ax1.annotate(
+        s='Start/\nFinish',
+        xy=(-72.79, double_up_df_enhance.latitude[0] + .0002),
+        xytext=(-72.79, double_up_df_enhance.latitude[0] + 0.0075),
+        arrowprops={
+            'arrowstyle': '-|>',
+            'lw': 3,
+            'ec': 'g',
+            'shrinkA': 2},
+        ha='center',
+        fontsize=16)
+
+    ax1.annotate(
+        s='', xy=(-72.805, 44.5225), xytext=(-72.795, 44.5275),
+        arrowprops={
+            'arrowstyle': '-|>',
+            'lw': 3,
+            'ec': 'purple',
+            'shrinkA': 2},
+        ha='center',
+        fontsize=16)
+
+    ax1.annotate(
+        s='', xy=(-72.825, 44.5175), xytext=(-72.815, 44.5175),
+        arrowprops={
+            'arrowstyle': '-|>',
+            'lw': 3,
+            'ec': 'purple',
+            'shrinkA': 2},
+        ha='center',
+        fontsize=16)
+
+    ax1.annotate(
+        s='', xy=(-72.835, 44.5375), xytext=(-72.835, 44.5275),
+        arrowprops={
+            'arrowstyle': '-|>',
+            'lw': 3,
+            'ec': 'purple',
+            'shrinkA': 2},
+        ha='center',
+        fontsize=16)
+
+    ax1.annotate(
+        s='', xy=(-72.815, 44.54575), xytext=(-72.825, 44.54575),
+        arrowprops={
+            'arrowstyle': '-|>',
+            'lw': 3,
+            'ec': 'purple',
+            'shrinkA': 2},
+        ha='center',
+        fontsize=16)
+
+    ax1.annotate(
+        s='', xy=(-72.815, 44.5375), xytext=(-72.815, 44.5425),
+        arrowprops={
+            'arrowstyle': '-|>',
+            'lw': 3,
+            'ec': 'purple',
+            'shrinkA': 2},
+        ha='center',
+        fontsize=16)
+
+    ax1.annotate(
+        s='', xy=(-72.815, 44.5275), xytext=(-72.815, 44.5325),
+        arrowprops={
+            'arrowstyle': '-|>',
+            'lw': 3,
+            'ec': 'purple',
+            'shrinkA': 2},
+        ha='center',
+        fontsize=16)
+
+    ax1.annotate(
+        s='', xy=(-72.815, 44.5275), xytext=(-72.815, 44.5325),
+        arrowprops={
+            'arrowstyle': '-|>',
+            'lw': 3,
+            'ec': 'purple',
+            'shrinkA': 2},
+        ha='center',
+        fontsize=16)
+
+    ax1.annotate(
+        s='', xy=(-72.808, 44.5375), xytext=(-72.812, 44.5325),
+        arrowprops={
+            'arrowstyle': '-|>',
+            'lw': 3,
+            'ec': 'purple',
+            'shrinkA': 2},
+        ha='center',
+        fontsize=16)
+
+    ax1.annotate(
+        s='', xy=(-72.795, 44.5375), xytext=(-72.805, 44.5425),
+        arrowprops={
+            'arrowstyle': '-|>',
+            'lw': 3,
+            'ec': 'purple',
+            'shrinkA': 2},
+        ha='center',
+        fontsize=16)
+
+    # Subplot 2
+    double_up_gdf[double_up_gdf.vertical_speed_ft_per_sec >= 0].plot(
+        ax=ax2, markersize=4, color='g', label="Running Up", zorder=3)
+    double_up_gdf[double_up_gdf.vertical_speed_ft_per_sec < 0].plot(
+        ax=ax2, markersize=4, color='purple', label="Running Down", zorder=2)
+
+    ax2.legend(borderpad=0.75,
+               edgecolor='white',
+               fontsize=16,
+               shadow=True)
+
+    ax2.set_xlabel("Longitude")
+    ax2.set_ylabel("Latitude")
+    ax2.grid(True, zorder=1)
+    ax2.xaxis.label.set_size(20)
+    ax2.yaxis.label.set_size(20)
+    ax2.title.set_size(24)
+    ax2.tick_params(labelsize=16)
+
+try:
+    plt.savefig(
+        fname=os.path.join("04-graphics-outputs", "06-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+except Exception as error:
+    print(f"Could not save plot as PNG. ERROR: {error}")
+else:
+    print(
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '06-double-up-gpx-data-figure.png')}")
+
+# Plot course lat/lon with cadence
+with plt.style.context('dark_background'):
+
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(20, 20))
+
+    # Subplot 1
+    double_up_gdf[double_up_gdf.cadence >= double_up_gdf.cadence.median()].plot(
+        ax=ax1, markersize=4, color='g', label="> Median Cadence", zorder=3)
+    double_up_gdf[double_up_df_enhance.cadence < double_up_df_enhance.cadence.median()].plot(
+        ax=ax1, markersize=4, color='purple', label="< Median Cadence", zorder=2)
+
+    ax1.legend(borderpad=0.75,
+               edgecolor='white',
+               fontsize=16,
+               shadow=True)
+
+    ax1.set_xlabel("Longitude")
+    ax1.set_ylabel("Latitude")
+    ax1.set_title("Mansfield Double Up Course, 2017\nCadence", size=20)
+    ax1.grid(True, zorder=1)
+    ax1.xaxis.label.set_size(20)
+    ax1.yaxis.label.set_size(20)
+    ax1.title.set_size(24)
+    ax1.tick_params(labelsize=16)
+
+    # Subplot 2
+    double_up_gdf[double_up_gdf.cadence >= double_up_gdf.cadence.max()*0.75].plot(
+        ax=ax2, markersize=4, color='#1a9641', label="> 75% Max Cadence", zorder=5)
+    double_up_gdf[(double_up_gdf.cadence < double_up_gdf.cadence.max()*0.75) & (double_up_gdf.cadence >= double_up_gdf.cadence.max()*0.5)].plot(
+        ax=ax2, markersize=4, color='#a6d96a', label="50%-75% Max Cadence", zorder=4)
+    double_up_gdf[(double_up_gdf.cadence < double_up_gdf.cadence.max()*0.50) & (double_up_gdf.cadence >= double_up_gdf.cadence.max()*0.25)].plot(
+        ax=ax2, markersize=4, color='#fdae61', label="25%-50% Max Cadence", zorder=3)
+    double_up_gdf[double_up_gdf.cadence < double_up_gdf.cadence.max()*0.25].plot(
+        ax=ax2, markersize=4, color='#d7191c', label="< 25% Max Cadence", zorder=6)
+
+    ax2.legend(borderpad=0.75,
+               edgecolor='white',
+               fontsize=16,
+               shadow=True)
+
+    ax2.set_xlabel("Longitude")
+    ax2.set_ylabel("Latitude")
+    ax2.grid(True, zorder=1)
+    ax2.xaxis.label.set_size(20)
+    ax2.yaxis.label.set_size(20)
+    ax2.title.set_size(24)
+    ax2.tick_params(labelsize=16)
+
+try:
+    plt.savefig(
+        fname=os.path.join("04-graphics-outputs", "07-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+except Exception as error:
+    print(f"Could not save plot as PNG. ERROR: {error}")
+else:
+    print(
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '07-double-up-gpx-data-figure.png')}")
+
+
+# Plot course lat/lon with speed
+with plt.style.context('dark_background'):
+
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(20, 20))
+
+    # Subplot 1
+    double_up_gdf[double_up_gdf.speed_mph >= double_up_gdf.speed_mph.median()].plot(
+        ax=ax1, markersize=4, color='g', label="> Median Speed", zorder=3)
+    double_up_gdf[double_up_gdf.speed_mph < double_up_gdf.speed_mph.median()].plot(
+        ax=ax1, markersize=4, color='purple', label="< Median Speed", zorder=2)
+
+    ax1.legend(borderpad=0.75,
+               edgecolor='white',
+               fontsize=16,
+               shadow=True)
+
+    ax1.set_xlabel("Longitude")
+    ax1.set_ylabel("Latitude")
+    ax1.set_title("Mansfield Double Up Course, 2017\nSpeed", size=20)
+    ax1.grid(True, zorder=1)
+    ax1.xaxis.label.set_size(20)
+    ax1.yaxis.label.set_size(20)
+    ax1.title.set_size(24)
+    ax1.tick_params(labelsize=16)
+
+    # Subplot 2
+    double_up_gdf[double_up_gdf.speed_mph >= double_up_gdf.speed_mph.max()*0.75].plot(
+        ax=ax2, markersize=4, color='#1a9641', label="> 75% Max Speed", zorder=5)
+    double_up_gdf[(double_up_gdf.speed_mph < double_up_gdf.speed_mph.max()*0.75) & (double_up_gdf.speed_mph >= double_up_gdf.speed_mph.max()*0.5)].plot(
+        ax=ax2, markersize=4, color='#a6d96a', label="50%-75% Max Speed", zorder=4)
+    double_up_gdf[(double_up_gdf.speed_mph < double_up_gdf.speed_mph.max()*0.50) & (double_up_gdf.speed_mph >= double_up_gdf.speed_mph.max()*0.25)].plot(
+        ax=ax2, markersize=4, color='#fdae61', label="25%-50% Max Speed", zorder=4)
+    double_up_gdf[double_up_gdf.speed_mph < double_up_gdf.speed_mph.max()*0.25].plot(
+        ax=ax2, markersize=4, color='#d7191c', label="< 25% Max Speed", zorder=2)
+
+    ax2.legend(borderpad=0.75,
+               edgecolor='white',
+               fontsize=16,
+               shadow=True)
+
+    ax2.set_xlabel("Longitude")
+    ax2.set_ylabel("Latitude")
+    ax2.grid(True, zorder=1)
+    ax2.xaxis.label.set_size(20)
+    ax2.yaxis.label.set_size(20)
+    ax2.title.set_size(24)
+    ax2.tick_params(labelsize=16)
+
+try:
+    plt.savefig(
+        fname=os.path.join("04-graphics-outputs", "08-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+except Exception as error:
+    print(f"Could not save plot as PNG. ERROR: {error}")
+else:
+    print(
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '08-double-up-gpx-data-figure.png')}")
+
+# Plot course lat/lon with normalized energy
+with plt.style.context('dark_background'):
+
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(20, 20))
+
+    # Subplot 1
+    double_up_gdf[double_up_gdf.energy_norm >= 0.5].plot(
+        ax=ax1, markersize=4, color='g', label="> 50% Max Energy", zorder=3)
+    double_up_gdf[double_up_gdf.energy_norm < 0.5].plot(
+        ax=ax1, markersize=4, color='purple', label="< 50% Max Energy", zorder=2)
+
+    ax1.legend(borderpad=0.75,
+               edgecolor='white',
+               fontsize=16,
+               shadow=True)
+
+    ax1.set_xlabel("Longitude")
+    ax1.set_ylabel("Latitude")
+    ax1.set_title("Mansfield Double Up Course, 2017\nEnergy", size=20)
+    ax1.grid(True, zorder=1)
+    ax1.xaxis.label.set_size(20)
+    ax1.yaxis.label.set_size(20)
+    ax1.title.set_size(24)
+    ax1.tick_params(labelsize=16)
+
+    # Subplot 2
+    double_up_gdf[double_up_gdf.energy_norm >= 0.75].plot(
+        ax=ax2, markersize=4, color='#1a9641', label="> 75% Max Energy", zorder=5)
+    double_up_gdf[(double_up_gdf.energy_norm < 0.75) & (double_up_gdf.energy_norm >= 0.5)].plot(
+        ax=ax2, markersize=4, color='#a6d96a', label="50%-75% Max Energy", zorder=5)
+    double_up_gdf[(double_up_gdf.energy_norm < 0.5) & (double_up_gdf.energy_norm >= 0.25)].plot(
+        ax=ax2, markersize=4, color='#fdae61', label="25%-50% Max Energy", zorder=3)
+    double_up_gdf[double_up_gdf.energy_norm <= 0.25].plot(
+        ax=ax2, markersize=4, color='#d7191c', label="< 25% Max Energy", zorder=2)
+
+    ax2.legend(borderpad=0.75,
+               edgecolor='white',
+               fontsize=16,
+               shadow=True)
+
+    ax2.set_xlabel("Longitude")
+    ax2.set_ylabel("Latitude")
+    ax2.grid(True, zorder=1)
+    ax2.xaxis.label.set_size(20)
+    ax2.yaxis.label.set_size(20)
+    ax2.title.set_size(24)
+    ax2.tick_params(labelsize=16)
+
+try:
+    plt.savefig(
+        fname=os.path.join("04-graphics-outputs", "09-double-up-gpx-data-figure.png"), facecolor='k', dpi=300, bbox_inches="tight")
+except Exception as error:
+    print(f"Could not save plot as PNG. ERROR: {error}")
+else:
+    print(
+        f"Saved plot as PNG: {os.path.join('04-graphics-outputs', '09-double-up-gpx-data-figure.png')}")

@@ -89,11 +89,16 @@ This section plots the raw data (cadence, distance, energy, speed, vertical spee
 **PLOTS HERE**
 
 Raw attribute data:
-![Raw Attribute Data](04-graphics-outputs/01-double-up-raw-attributes.png)
+![Plot 1](04-graphics-outputs/01-double-up-gpx-data-figure.png)
 
-![Raw Attribute Data](04-graphics-outputs/02-double-up-raw-attributes.png)
+![Plot 2](04-graphics-outputs/02-double-up-gpx-data-figure.png)
 
-![Raw Attribute Data](04-graphics-outputs/10-double-up-raw-attributes.png)
+![Plot 3](04-graphics-outputs/03-double-up-gpx-data-figure.png)
+
+![Plot 4](04-graphics-outputs/04-double-up-gpx-data-figure.png)
+
+![Plot 5](04-graphics-outputs/05-double-up-gpx-data-figure.png)
+
 
 #### 5.6.2 Course Plots
 
@@ -103,6 +108,14 @@ The workflow then plots cadence, speed, and energy throughout the course route, 
 
 
 **PLOTS HERE**
+
+![Plot 6](04-graphics-outputs/06-double-up-gpx-data-figure.png)
+
+![Plot 7](04-graphics-outputs/07-double-up-gpx-data-figure.png)
+
+![Plot 8](04-graphics-outputs/08-double-up-gpx-data-figure.png)
+
+![Plot 9](04-graphics-outputs/09-double-up-gpx-data-figure.png)
 
 ## 6.0 Risk Assessment
 
