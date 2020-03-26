@@ -97,8 +97,9 @@ with plt.style.context('dark_background'):
         axes.tick_params(labelsize=12)
         axes.set_xlabel("Time (US Eastern)")
 
+        # Add caption
+        fig.text(0.5, .05, "Data source: Native Endurance", ha='center', fontsize=14)
 
-""" Save plots as figures """
 try:
     plt.savefig(
         fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-01.png"), facecolor='k', dpi=300, bbox_inches="tight")
@@ -141,6 +142,9 @@ with plt.style.context('dark_background'):
     date_form = DateFormatter("%H:%M AM")
     ax.xaxis.set_major_formatter(date_form)
 
+    # Add caption
+    fig.text(0.85, .05, "Data source: Native Endurance", ha='center', fontsize=14)
+
 try:
     plt.savefig(
         fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-02.png"), facecolor='k', dpi=300, bbox_inches="tight")
@@ -182,6 +186,9 @@ with plt.style.context('dark_background'):
     date_form = DateFormatter("%H:%M AM")
     ax.xaxis.set_major_formatter(date_form)
 
+    # Add caption
+    fig.text(0.85, .05, "Data source: Native Endurance", ha='center', fontsize=14)
+
 try:
     plt.savefig(
         fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-03.png"), facecolor='k', dpi=300, bbox_inches="tight")
@@ -190,7 +197,6 @@ except Exception as error:
 else:
     print(
         f"Saved plot as PNG: {os.path.join('04-graphics-outputs', 'double-up-gpx-data-figure-03.png')}")
-
 
 # Plot normalized energry, distinguishing up/down movement
 with plt.style.context('dark_background'):
@@ -223,6 +229,9 @@ with plt.style.context('dark_background'):
     # Define the date format
     date_form = DateFormatter("%H:%M AM")
     ax.xaxis.set_major_formatter(date_form)
+
+    # Add caption
+    fig.text(0.85, .05, "Data source: Native Endurance", ha='center', fontsize=14)
 
 try:
     plt.savefig(
@@ -264,6 +273,9 @@ with plt.style.context('dark_background'):
     # Define the date format
     date_form = DateFormatter("%H:%M AM")
     ax.xaxis.set_major_formatter(date_form)
+
+    # Add caption
+    fig.text(0.85, .05, "Data source: Native Endurance", ha='center', fontsize=14)
 
 try:
     plt.savefig(
@@ -419,6 +431,9 @@ with plt.style.context('dark_background'):
     ax2.title.set_size(24)
     ax2.tick_params(labelsize=16)
 
+    # Add caption
+    fig.text(0.5, .05, "Data source: Native Endurance", ha='center', fontsize=14)
+
 try:
     plt.savefig(
         fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-06.png"), facecolor='k', dpi=300, bbox_inches="tight")
@@ -475,6 +490,9 @@ with plt.style.context('dark_background'):
     ax2.yaxis.label.set_size(20)
     ax2.title.set_size(24)
     ax2.tick_params(labelsize=16)
+
+    # Add caption
+    fig.text(0.5, .05, "Data source: Native Endurance", ha='center', fontsize=14)
 
 try:
     plt.savefig(
@@ -534,6 +552,9 @@ with plt.style.context('dark_background'):
     ax2.title.set_size(24)
     ax2.tick_params(labelsize=16)
 
+    # Add caption
+    fig.text(0.5, .05, "Data source: Native Endurance", ha='center', fontsize=14)
+
 try:
     plt.savefig(
         fname=os.path.join("04-graphics-outputs", "double-up-gpx-data-figure-08.png"), facecolor='k', dpi=300, bbox_inches="tight")
@@ -590,6 +611,9 @@ with plt.style.context('dark_background'):
     ax2.yaxis.label.set_size(20)
     ax2.title.set_size(24)
     ax2.tick_params(labelsize=16)
+
+    # Add caption
+    fig.text(0.5, .05, "Data source: Native Endurance", ha='center', fontsize=14)
 
 try:
     plt.savefig(
