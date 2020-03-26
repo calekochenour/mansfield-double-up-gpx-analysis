@@ -1,6 +1,6 @@
 # Jupyter Notebook and checkpoints
 *.ipynb
-ipynb_checkpoints/
+.ipynb_checkpoints/
 
 # PDF
 *.pdf
