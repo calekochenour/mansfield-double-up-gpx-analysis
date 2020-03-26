@@ -17,5 +17,7 @@ all: 05-papers-writings/mansfield-double-up-gpx-analysis.ipynb
 clean:
 	rm -f 05-papers-writings/*.ipynb
 	rm -f 05-papers-writings/*.pdf
+	rm -f 05-papers-writings/.ipynb_checkpoints/*
+	rm -d 05-papers-writings/.ipynb_checkpoints/
 	rm -f 04-graphics-outputs/*.png
 	rm -f 03-processed-data/*.csv
