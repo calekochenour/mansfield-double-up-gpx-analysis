@@ -16,7 +16,7 @@ To run this project in a web browser, click the icon below to launch the project
 
 Binder will open a Jupyter Notebook in the current web browser. Click "New" and select "Terminal" to open a terminal in the project folder.
 
-## Quickstart
+## Instructions
 
 ### Create and Activate Conda Environment
 
@@ -44,7 +44,7 @@ Execute the code:
 make
 ```
 
-## Project Contents
+## Contents
 
 The project contains folders for all stages of the workflow as well as other files necessary to run the analysis.
 
